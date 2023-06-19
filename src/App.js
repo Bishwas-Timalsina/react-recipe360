@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import HeaderComponent from './components/HeaderComponent'
+import SearchComponent from './components/SearchComponent'
+import { DisplayComponent } from './components/DisplayComponent'
+import { DetailComponent } from './components/DetailComponent'
+import { VegComponent } from './components/VegComponent'
+import { CategoryComponent } from './components/CategoryComponent'
+import { Route, Routes } from 'react-router-dom'
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      <div className='max-w-7xl mx-auto'>
+        <HeaderComponent />
+        
+        <Routes>
+          <Route exact path='/' element={<DisplayComponent />} />
+          <Route path='/categories/:parameter' element={<CategoryComponent />} />
+          <Route path='/vegetarian' element={<VegComponent />} />
+          <Route path='/detail/:id' element={<DetailComponent />} />
+        </Routes>
+
+      </div>
+
+    </>
+  )
 }
 
-export default App;
+export default App
