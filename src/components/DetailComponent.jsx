@@ -52,13 +52,13 @@ export const DetailComponent = () => {
       <>
         <div className='max-w-7xl mx-auto px-4 my-12'>
           <div className='flex flex-col justify-center items-center'>
-            <img src={strMealThumb} alt="" className='h-[40vh] w-[40%] rounded-md' />
+            <img src={strMealThumb} alt="" className='h-[40vh] w-[40%] rounded-md object-contain' />
             <p className='text-[22px] font-[500]'>{strMeal}</p>
             <p className='text-[14px] font-[400]'>{strArea}</p>
           </div>
 
           <div className='grid grid-cols-4 justify-center items-start px-4'>
-            <div className='max-w-5xl px-12 col-span-1'>
+            <div className='max-w-5xl px-12 col-span-1 sticky top-[20px]'>
               <h2 className='text-[28px] font-[500] underline'>Ingredients</h2>
               {
                 ingredients.map((ing, index) => (

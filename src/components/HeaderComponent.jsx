@@ -49,8 +49,9 @@ const HeaderComponent = () => {
                 <input type="text" placeholder='Enter the Dish'
                     name='dishName'
                     id='dishName'
-                    className='h-[20px] bg-[grey] text-white placeholder:text-white caret-white cursor-pointer py-5 px-3 rounded-lg col-span-12 w-full outline-none'
+                    className='h-[20px] bg-[#c7c7c7] text-black placeholder:text-black caret-black cursor-pointer py-5 px-3 rounded-lg col-span-12 w-full outline-none'
                     onKeyDown={handleKeyDown}
+                    autoComplete="off"
                 />
                 <button type='submit' className='text-2xl font-[500] absolute right-4 bottom-0 h-full' onClick={handleSubmit}>
                     <AiOutlineSearch />
